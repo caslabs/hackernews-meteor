@@ -1,28 +1,47 @@
-/* Use Open Sans as the default sans serif font. */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
-
-/* Set up some CSS variables to theme the application. */
-:root {
-  --matr-navbar-bg: #ECECEC;
-  --matr-navbar-bg-rgb: 236, 236, 236;
+.navbar {
+  background-color: #ff6600; /* Hacker News orange */
 }
 
-/* Change bootstrap variable values.
- See https://getbootstrap.com/docs/5.2/customize/css-variables/
- */
-body {
-  --bs-light-rgb: var(--matr-navbar-bg-rgb);
+.navbar-brand {
+  color: white;
+  font-weight: bold;
 }
 
-/* Set the alert background on the signin and signup pages. */
-#signin-page .alert-light, #signup-page .alert-light {
-  --bs-alert-bg: var(--matr-navbar-bg);
+.nav-link {
+  color: white;
+  padding: 0;
 }
 
-/* Define custom styles */
-.gray-background {
-  background-color: var(--matr-navbar-bg);
-  color: var(--bs-dark);
-  padding-top: 10px;
-  padding-bottom: 20px;
+.navbar-nav span {
+  padding: 0 10px;
+}
+
+a {
+  color: black;
+  font-weight: light;
+}
+
+/* Style for the domain and metadata (points, username, etc.) */
+.text-muted {
+  color: #828282; /* A gray color used on Hacker News */
+}
+
+.col-12 span.text-muted {
+  margin-right: 4px;
+}
+
+.row.mb-2 {
+  background-color: #f6f6f0;
+}
+
+form {
+  background-color: #f6f6f0;
+}
+
+.row.mb-2 {
+  margin-bottom: 0px !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: block !important;
 }
