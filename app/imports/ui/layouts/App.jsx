@@ -8,7 +8,7 @@ import Landing from '../pages/Landing';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
-  const { ready } = useTracker(() => {
+  useTracker(() => {
     const rdy = Roles.subscription.ready();
     return {
       ready: rdy,
@@ -46,7 +46,7 @@ const AdminProtectedRoute = ({ ready, children }) => {
     return <Navigate to="/signin" />;
   }
   if (!ready) {
-    return <LoadingSpinner />;
+    return <div>loading</div>;
   }
   const isAdmin = Roles.userIsInRole(Meteor.userId(), 'admin');
   return (isLogged && isAdmin) ? children : <Navigate to="/notauthorized" />;
